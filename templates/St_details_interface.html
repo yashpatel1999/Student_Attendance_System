@@ -1,0 +1,129 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+    <style>
+
+
+    input[type=text] {
+  width: 100%;
+    color: black;
+  padding: 10px 17px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 34px;
+}
+.btn1 {
+  font-family: 'times', cursive;
+  font-size:28px;
+  background-color: #ff9900;
+  color: Black;
+  padding: 7px 26px;
+  margin: 20px 8px 8px 325px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+   opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right:2px;
+   border-radius: 34px;
+}
+.btn1:hover
+{
+    opacity:1;
+}
+.btn2 {
+  font-family: 'times', cursive;
+  font-size:28px;
+  background-color: #ff9900;
+  color: black;
+  padding: 7px 26px;
+  margin: 20px 8px 8px 13px;
+  border: none;
+  cursor: pointer;
+  width: 41%;
+   opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right:2px;
+ border-radius: 34px;
+}
+.btn2:hover
+{
+    opacity: 3
+}
+select
+{
+    width: 100%;
+    color: black;
+  padding: 10px 17px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+    </style>
+
+
+
+  <div class="container">
+
+    <h1>Enter Information To check Registered Students👦🏻 Details</h1>
+
+  </div>
+</div>
+
+
+
+<body>
+ <div class="login">
+
+    <form action = "{{ url_for('St_details')}}" method="post">
+    <div class="container">
+        <label ><b>Select your Department</b></label>
+        </br>
+        <select name="dept1" required>
+            <option>Computer</option>
+            <option>Information Technology</option>
+    </select>
+
+        <label ><b>Select your Semester</b></label>
+        </br>
+        <select name="sem1" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+    </select>
+
+        <label ><b>Select your Division</b></label>
+        </br>
+        <select name="div1" required>
+            <option>A</option>
+            <option>B</option>
+    </select>
+
+    </div>
+
+
+      <button type="submit" class="btn1">Check Students Data</button>
+    </form>
+
+</div>
+  <div class="row">
+  </div>
+
+{% endblock %}

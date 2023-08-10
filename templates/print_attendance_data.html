@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+
+  <div class="container">
+
+    <h1>📃 Attendance of Subject {{ subject_b }}🧑‍🎓</h1>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+    </div>
+  </div>
+    <style>
+       .users {
+  table-layout: fixed;
+  width: 98%;
+  white-space: nowrap;
+  border-color:black;
+  margin:20px 8px 8px 12px;
+}
+/* Column widths are based on these cells */
+
+.users td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.users th {
+  background: #1a1a1a;
+  color: #FFF;
+}
+.users td{
+  background: #d9d9d9;
+  color: #1a1a1a;
+}
+.users td,
+.users th {
+  text-align: left;
+  padding: 5px 10px;
+}
+  </style>
+     <div class="row">
+         <table class="users" border="1px solid black">
+    <tr>
+        {% for header in heading %}
+        <th class="text-left">
+            {{header}}
+        </th>
+        {% endfor %}
+    </tr>
+             {% for row1 in result %}
+             <tr>
+                 {% for cell in row1 %}
+                 <td class="text-left">
+                     {{ cell }}
+                 </td>
+                 {% endfor %}
+             </tr>
+             {% endfor %}
+</table>
+<div class="col-md-6 col-sm-6 col-xs-6"> <a href="/" class="btn btn-sm animated-button victoria-two">Home🏠</a></div>
+
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/display_attendance" class="btn btn-sm animated-button victoria-two">Return ↩</a></div>
+     </div>
+</div>
+{% endblock %}

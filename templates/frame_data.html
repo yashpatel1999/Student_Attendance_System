@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+
+  <div class="container">
+
+    <h1>Face👦🏻 Image Generator System</h1>
+
+  </div>
+</div>
+<!--<script type="text/javascript">-->
+<!--  function showImage()-->
+<!--  {-->
+<!--    document.getElementById('cam').style.visibility="visible";-->
+<!--  }-->
+<!--</script>-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+    </div>
+  </div>
+  <style>
+  table
+  {
+   width:97%;
+   border-color: #ff9900;
+   margin:20px 8px 8px 13px;
+  }
+  table,th,td
+  {
+    text-align:center;
+    border-color: #ff9900;
+    color:#c2c2a3;
+  }
+  caption
+  {
+    text-align:center;
+    color:white
+  }
+ .button
+  {
+  background-color:#ff9900; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-color:white
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  }
+ .button1
+  {
+    background-color:transparent;
+    color: white;
+    border: 2px solid #ff9900;
+  }
+  .button1:hover {
+  background-color: #ff9900;
+  color: white;
+}
+#more
+{
+display:none;
+}
+
+  </style>
+  <div class="row">
+<!--    <div class="col-md-12 col-sm-12 col-xs-12">-->
+    <table  align="center" border="1px">
+      <caption style="align:center"><b><u>Student Details</u></b></caption>
+       <tr align="center">
+         <th>Name</th>
+         <th>Enrollment</th>
+       </tr>
+      <tr>
+
+        <td>{{ f_nm }}</td>
+        <td>{{f_enroll}}</td>
+      </tr>
+    </table>
+    <p style="color:#ff66ff; margin:20px 8px 8px 13px;"><span id="dots"></span><span id="more">Step-1:Please take Images in lighty environment for better accuracy.<br>
+      Step-2:Click on <b style="color:#3385ff">"Start Camera"</b> to Click images<br>
+      Step-3:Click on <b style="color:#3385ff">"Train model"</b> after camera stop & after adding all students faces.<br>
+      Note:We will take around 20 images.
+      </span></p>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+    <button onclick="myFunction()" id="myBtn" class="button button1">Read more</button>
+    </div>
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Click here for more instructions";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+    <div class="col-md-12 col-sm-12 col-xs-12"> <a href="/start_camera" class="btn btn-sm animated-button victoria-two">Start Camera💻</a></div>
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/training" class="btn btn-sm animated-button victoria-two">Train Model💻</a></div>
+
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/train_model" class="btn btn-sm animated-button victoria-two">Add Students👦🏻</a></div>
+  </div>
+</div>
+{% endblock %}

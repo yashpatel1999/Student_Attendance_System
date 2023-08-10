@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center" xmlns="http://www.w3.org/1999/html">
+
+  <div class="container">
+
+    <img src="static/face.jpg" width="200px" height="200px" align="left"><h1>  Face👦🏻 Recognition Based</h1><h1>Attendance📝 System</h1>
+
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Here We go !</h2>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/train_model" class="btn btn-sm animated-button victoria-one">Register new Students📝</a> </div>
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/detection" class="btn btn-sm animated-button victoria-one">Fill Attendance Using Face Recognition</a> </div>
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/get_st_data" class="btn btn-sm animated-button victoria-two">Check Registered Students Data📝</a> </div>
+        <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/display_attendance" class="btn btn-sm animated-button victoria-two">Check Students Attendance📝</a>
+            <br></br></div>
+  </div>
+</div>
+    {% endblock %}

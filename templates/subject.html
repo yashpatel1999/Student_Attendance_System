@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="jumbotron text-center">
+    <style>
+
+
+    input[type=text] {
+  width: 100%;
+    color: black;
+  padding: 10px 17px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 34px;
+}
+.btn1 {
+  font-family: 'times', cursive;
+  font-size:28px;
+  background-color: #ff9900;
+  color: Black;
+  padding: 7px 26px;
+  margin: 20px 8px 8px 325px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+   opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right:2px;
+   border-radius: 34px;
+}
+.btn1:hover
+{
+    opacity:1;
+}
+.btn2 {
+  font-family: 'times', cursive;
+  font-size:28px;
+  background-color: #ff9900;
+  color: black;
+  padding: 7px 26px;
+  margin: 20px 8px 8px 13px;
+  border: none;
+  cursor: pointer;
+  width: 41%;
+   opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right:2px;
+ border-radius: 34px;
+}
+.btn2:hover
+{
+    opacity: 3
+}
+select
+{
+    width: 100%;
+    color: black;
+  padding: 10px 17px;
+  margin: 2px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+    </style>
+
+
+
+  <div class="container">
+
+    <h1>Enter Student👦🏻 Details</h1>
+
+  </div>
+</div>
+
+
+
+<body>
+ <div class="login">
+
+    <form action = "{{ url_for('print_attendance_data')}}" method="post">
+    <div class="container">
+
+        <label ><b>Select your Subject</b></label>
+        </br>
+        <select name="sub1" required>
+            {% for X in final_dir_list %}
+            <option>{{ X }}</option>
+            {% endfor %}
+    </select>
+
+
+    </div>
+
+
+      <button type="submit" class="btn1">Click Here To See The Attendance of Selected Subject</button>
+    </form>
+
+</div>
+  <div class="row">
+  </div>
+
+{% endblock %}
